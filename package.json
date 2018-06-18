@@ -1,0 +1,27 @@
+{
+  "name": "talk-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node --project tsconfig.json src/index.ts",
+    "watch": "nodemon --watch src --ext ts --ignore '*.spec.ts' --exec npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@marblejs/core": "^0.5.0",
+    "@marblejs/middleware-body": "^0.5.0",
+    "@marblejs/middleware-logger": "^0.5.0",
+    "mongodb": "^3.0.10",
+    "rxjs": "^6.2.1",
+    "typescript": "^2.9.2"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.0.19",
+    "@types/node": "^10.3.3",
+    "nodemon": "^1.17.5",
+    "ts-node": "^6.1.1"
+  }
+}
