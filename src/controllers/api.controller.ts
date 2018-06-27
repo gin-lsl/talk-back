@@ -1,6 +1,7 @@
 import { combineRoutes, Effect, matchPath, matchType } from '@marblejs/core';
 import { map } from 'rxjs/operators';
 import { users$ } from './user.controller';
+import { qun$ } from './qun.controller';
 
 const root$: Effect = req$ => req$.pipe(
   matchPath('/'),
@@ -13,5 +14,6 @@ export const api$ = combineRoutes(
   [
     root$,
     users$,
+    qun$,
   ]
 );

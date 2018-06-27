@@ -13,14 +13,18 @@
   "dependencies": {
     "@marblejs/core": "^0.5.0",
     "@marblejs/middleware-body": "^0.5.0",
+    "@marblejs/middleware-joi": "^0.5.0",
     "@marblejs/middleware-logger": "^0.5.0",
+    "jsonwebtoken": "^8.3.0",
     "mongodb": "^3.0.10",
     "rxjs": "^6.2.1",
     "typescript": "^2.9.2"
   },
   "devDependencies": {
+    "@types/joi": "^13.3.0",
     "@types/mongodb": "^3.0.19",
     "@types/node": "^10.3.3",
+    "debug": "^3.1.0",
     "nodemon": "^1.17.5",
     "ts-node": "^6.1.1"
   }

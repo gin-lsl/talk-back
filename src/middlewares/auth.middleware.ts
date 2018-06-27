@@ -1,6 +1,7 @@
-import { Effect, HttpRequest } from '@marblejs/core';
+import { Effect, HttpRequest, HttpError, HttpStatus } from '@marblejs/core';
 import { iif, of, throwError } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { createError } from '../functions/response.function';
 
 /**
  * auth$, check authorization header
@@ -12,7 +13,7 @@ import { switchMap } from 'rxjs/operators';
 export const auth$: Effect<HttpRequest> = req$ => req$.pipe(
   switchMap(req => iif(
     () => !req.headers['authorization'],
-    throwError({}),
+    throwError(createError(new HttpError('Unauthorized', HttpStatus.UNAUTHORIZED))),
     of(req),
   ))
 );
